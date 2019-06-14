@@ -22,66 +22,102 @@
      }
      .highlight{
        background-color: #DD0000;
-       color: red;
+       color: white;
      }
      img{
        vertical-align: middle;
      }
-
-     .topmenu-option{
+     #content{
+       text-align: justify;
+       font-size: 1rem;
+       margin-top:2rem;
+     }
+     .explicacion{
+       text-align: justify;
+       font-size: 1.2rem;
+       margin-bottom: 3rem;
+     }
+     .topmenu-suboption a{
+      font-size:1.2rem;
+      font-weight: 400;
+      text-align: center;
+      background-color: black;
+      color:white;
+     }
+     .topmenu-option, .topmenu-option a{
        background-color: black;
        border-radius: 6px;
-       color: #333;
+       color: white;
+       text-align: center;
+       font-size: 1.2rem;
+       text-decoration: none;
      }
+     #submenu{
+       padding-top:30px;
+       font-size: 20px;
+       text-align: right;
 
+     }
      .topmenu-submenu{
        float:left;
+       background-color: black;
+       width:100%;
+       text-align: center;
      }
      #topmenu1 {
        height: 30px;
      }
+    
     </style>
   </head>
   <body>
-    <span class="huge">Activity 7: Accesibility</span>
-    <p>This is a nightmare webpage in terms of <img src="accesibility.png" /> change <span class="highlight">anything you need</span> to make it shine.</p>
+    <!--<span class="huge">Activity 7: Accesibility</span>-->
+    <h1>Activity 7: Accesibility</h1>
+    <div class="explicacion"><p>This is a nightmare webpage in terms of <img src="accesibility.png" alt="imagen que dice accesibility" /> change <span class="highlight">anything you need</span> to make it shine.</p></div>
+
     <div class="container">
       <div class="row" >
-        <div class="col-sm-3" id="topmenu1">
-          <div class="topmenu-option">
-            Menú 1
-          </div>
-        </div>
+       
         <div class="col-sm-3" id="topmenu2">
           <div class="topmenu-option">
-            Menú 2
+          <a href="index.html"><span>Inicio</span></a>
+          
           </div>
         </div>
         <div class="col-sm-3" id="topmenu3">
           <div class="topmenu-option">
-            Menú 3
+            <a href="https://youtube.com">Ir a youtube</span>
           </div>
         </div>
-        <div class="col-sm-3" id="topmenu4">
-          <div class="topmenu-option">
-            Menú 4
+        
+        <div class="col-sm-3" id="topmenu1">
+            <div class="topmenu-option">
+              <span>Links</span>
+            </div>
           </div>
-        </div>
+          <div class="col-sm-3" id="topmenu4">
+              <div class="topmenu-option">
+                <a href="https://es.wikipedia.com">Ir a Wikipedia</a>
+              </div>
+            </div>
       </div>
+ 
+
       <div class="row">
-        <div class="col-sm-3">
-          <span onclick="showContent1()">View content 1</span><br />
-          <span onclick="showContent2()">View content 2</span>
-        </div>
+       
         <div class="col-sm-8" id="content">
-          DEFAULT PAGE
-          Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore et dolore magna aliqua veniam, quis nostrud exercitation ullamcorpor s commodo consequat. Duis autem vel eum irrure esse molestiae consequat, vel illum dolore eu fugi et iusto odio dignissim qui blandit praesent luptat exceptur sint occaecat cupiditat non provident, deserunt mollit anim id est laborum et dolor fuga distinct. Nam liber tempor cum soluta nobis elige quod maxim placeat facer possim omnis volupt
+          <h2>DEFAULT PAGE</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore et dolore magna aliqua veniam, quis nostrud exercitation ullamcorpor s commodo consequat. Duis autem vel eum irrure esse molestiae consequat, vel illum dolore eu fugi et iusto odio dignissim qui blandit praesent luptat exceptur sint occaecat cupiditat non provident, deserunt mollit anim id est laborum et dolor fuga distinct. Nam liber tempor cum soluta nobis elige quod maxim placeat facer possim omnis volupt
 <br><br>
 Lorem ipsum dolor si amet, consectetur adipiscing incidunt ut labore et dolore magna aliquam erat nostrud exercitation ullamcorper suscipit laboris nis duis autem vel eum irure dolor in reprehenderit i, dolore eu fugiat nulla pariatur. At vero eos et accusa praesant luptatum delenit aigue duos dolor et mole provident, simil tempor sunt in culpa qui officia de fuga. Et harumd dereud facilis est er expedit disti eligend optio congue nihil impedit doming id quod assumenda est, omnis dolor repellend. Temporibud
 <br><br>
 Lorem ipsum dolor si amet, consectetur adipiscing incidunt ut labore et dolore magna aliquam erat nostrud exercitation ullamcorper suscipit laboris nis duis autem vel eum irure dolor in reprehenderit i dolore eu fugiat nulla pariatur. At vero eos et accus praesant luptatum delenit aigue duos dolor et mol provident, simil tempor sunt in culpa qui officia de fuga. Et harumd dereud facilis est er expedit disti eligend oprio congue nihil impedit doming id quod assumenda est, omnis dolor repellend. Temporibud
-<br><br>
+<br><br></p>
         </div>
+        <div class="col-sm-3" id="submenu">
+            <span onclick="showContent1()">View content 1</span><br />
+            <span onclick="showContent2()">View content 2</span>
+          </div>
       </div>
     </div>
 
@@ -94,12 +130,12 @@ Lorem ipsum dolor si amet, consectetur adipiscing incidunt ut labore et dolore m
       var topM1 = document.getElementById('topmenu1');
       topM1.onclick= function(){;
         if (topM1.querySelectorAll('.topmenu-suboption').length) {
-          topM1.innerHTML = '<div class="topmenu-option">Menu 1</div>';
+          topM1.innerHTML = '<div class="topmenu-option">Links</div>';
         } else {
-          topM1.innerHTML = '<div class="topmenu-option">Menu 1</div><div class="topmenu-submenu"><div class="topmenu-suboption"><a href="https://google.com/">Google</div><div class="topmenu-suboption"><a href="https://bing.com/">Bing</div></div>';
+          topM1.innerHTML = '<div class="topmenu-option">Links</div><div class="topmenu-submenu"><div class="topmenu-suboption"><a href="https://google.com/">Google</div><div class="topmenu-suboption"><a href="https://bing.com/">Bing</div></div>';
         }
       }
-      var topM2 = document.getElementById('topmenu2');
+      var topM2 = document.getElementById('topmenu4');
       topM2.onclick= function(){;
         location.href = 'https://www.wikipedia.org/';
       }
@@ -109,11 +145,11 @@ Lorem ipsum dolor si amet, consectetur adipiscing incidunt ut labore et dolore m
       }
       function showContent1(){
         var content = document.getElementById('content');
-        content.innerHTML = '<span class="important" style="color:#fffc16; font-size:2em;">This is the first content:<br/><img src="content1.png"></span><h1>and lot more</h1>Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut laboreLorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore<h1>content</h1><h4>is</h4><h4>important</h4>'
+        content.innerHTML = '<span class="important" style="color:black; font-size:2em;"><h1>This is the first content</h1><br/><img src="content1.png" alt="esto es un texto"></span><h2>and lot more</h1>Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut laboreLorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore<h3>content</h3><h4>is</h4><h4>important</h4>'
       }
       function showContent2(){
         var content = document.getElementById('content');
-        content.innerHTML = '<b>Lorem ipsum dolor sit amet</b>, consectetur adipisci tempor incidunt ut labore et dolore magna aliqua veniam, quis nostrud exercitation ullamcorpor s commodo consequat. Duis autem vel eum irrure esse molestiae consequat, vel illum dolore eu fugi et iusto odio dignissim qui blandit praesent luptat exceptur sint occaecat cupiditat non provident, deserunt mollit anim id est laborum et dolor fuga distinct. Nam liber tempor cum soluta nobis elige quod maxim placeat facer possim omnis volupt'
+        content.innerHTML = '<span><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisci tempor incidunt ut labore et dolore magna aliqua veniam, quis nostrud exercitation ullamcorpor s commodo consequat. Duis autem vel eum irrure esse molestiae consequat, vel illum dolore eu fugi et iusto odio dignissim qui blandit praesent luptat exceptur sint occaecat cupiditat non provident, deserunt mollit anim id est laborum et dolor fuga distinct. Nam liber tempor cum soluta nobis elige quod maxim placeat facer possim omnis volupt</span>'
       }
     </script>
   </body>
