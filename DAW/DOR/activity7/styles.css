@@ -1,0 +1,82 @@
+.item{
+    border: 1px solid black;
+  }
+  .colornav{
+   background-color: #f8f9fa;
+  }
+  #flexcontainer5 .item{
+    max-width: 70px;
+  }
+  .huge{
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .highlight{
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+  }
+  img{
+    vertical-align: middle;
+  }
+  #content{
+    text-align: justify;
+    font-size: 1rem;
+    margin-top:2rem;
+  }
+  .explicacion{
+    text-align: justify;
+    font-size: 1.2rem;
+    background-color: #f2f2f2;
+  }
+  .explicacion p, .explicacion h1{
+    padding: 1rem;
+  }
+  .topmenu-suboption a{
+   font-size:1.2rem;
+   font-weight: 400;
+   text-align: center;
+   background-color: black;
+   color:white;
+  }
+  .topmenu-option, .topmenu-option a{
+    background-color: black;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  #submenu{
+    padding-top:30px;
+    font-size: 20px;
+    text-align: right;
+
+  }
+  .topmenu-submenu{
+    float:left;
+    background-color: black;
+    width:100%;
+    text-align: center;
+  }
+  #topmenu1 {
+    height: 30px;
+  }
+  .fl{
+    float: left;
+  }
+  ul{
+    list-style-type: none;
+  }
+  .fl li{
+     margin-left: -2.5rem;
+  }
+  ol .breadcrumb {
+    color:white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    list-style: none;
+  }
